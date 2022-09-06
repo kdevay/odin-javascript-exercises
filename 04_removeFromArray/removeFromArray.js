@@ -2,7 +2,7 @@ const removeFromArray = function() {
     // Use arguments object to access all arguments
     let array = argument[0];
     // Find out how many arguments are in object
-    let argObjectSize = Object.keys(argumentsObj).length;
+    let argObjectSize = Object.keys(argument).length;
     if (argObjectSize < 2) {
         return argument;
     }
