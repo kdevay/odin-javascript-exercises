@@ -1,10 +1,10 @@
 const removeFromArray = function() {
     // Use arguments object to access all arguments
-    let array = argument[0];
+    let array = arguments[0];
     // Find out how many arguments are in object
-    let argObjectSize = Object.keys(argument).length;
+    let argObjectSize = Object.keys(arguments).length;
     if (argObjectSize < 2) {
-        return argument;
+        return arguments;
     }
 
     let returnArray = "";
@@ -12,7 +12,7 @@ const removeFromArray = function() {
     for (let i = 0; i < array.length; i++) {
             for(let j = 0; j < argObjectSize; j++) {
                 // If current element matches current arg
-                if (array[i] === argument[j]) {
+                if (array[i] === arguments[j]) {
                     // Deleted items will be replaced by "null"
                     delete array[i];
                 }
