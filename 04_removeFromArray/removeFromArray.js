@@ -12,7 +12,7 @@ const removeFromArray = function() {
     for (let i = 0; i < array.length; i++) {
             for (var j in arguments){
                 // If current element matches current arg
-                if (array[i] === argument[j]) {
+                if (array[i] === arguments[j]) {
                     // Deleted items will be replaced by "null"
                     delete array[i];
                 }
