@@ -3,8 +3,11 @@ const removeFromArray = function() {
     let array = arguments[0];
     // Find out how many arguments are in object
     let argObjectSize = Object.keys(arguments).length;
+    console.log('arg obje: ', arguments)
+    console.log('args: ', array)
+    console.log('obj keys: ', Object.keys(arguments))
     if (argObjectSize < 2) {
-        return arguments;
+        return array;
     }
 
     let returnArray = [];
