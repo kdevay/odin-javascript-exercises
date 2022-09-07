@@ -10,7 +10,7 @@ const removeFromArray = function() {
     let returnArray = "";
 
     for (let i = 0; i < array.length; i++) {
-            for(let j = 0; j < argObjectSize; j++) {
+            for (var argument in arguments){
                 // If current element matches current arg
                 if (array[i] === arguments[j]) {
                     // Deleted items will be replaced by "null"
@@ -20,6 +20,7 @@ const removeFromArray = function() {
                 if (array[i]){
                     returnArray += array[i];
                 }
+            }
         }
     }
     return returnArray;
