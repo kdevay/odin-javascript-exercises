@@ -3,7 +3,7 @@
 const ftoc = function(fTemp) {
   let cTemp = (fTemp - 32) / 1.8;
   // round
-  cTemp = (round(cTemp * 10))/10;
+  cTemp = (Math.round(cTemp * 10))/10;
   return cTemp;
 };
 
@@ -11,7 +11,7 @@ const ftoc = function(fTemp) {
 const ctof = function(cTemp) {
   let fTemp = (cTemp * 1.8) + 32;
   // round
-  fTemp = (round(fTemp * 10))/10;
+  fTemp = (Math.round(fTemp * 10))/10;
   return fTemp;
 };
 
