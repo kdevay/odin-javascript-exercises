@@ -13,18 +13,22 @@ const removeFromArray = function() {
     let returnArray = [];
 
     for (let i = 0; i < array.length; i++) {
-            for (var j in arguments){
+            for (var j in arguments) {
+                // Exclude the first argument
+                if (j === 0) {
+                    j += 1;
+                }
                 // If current element matches current arg
                 if (array[i] === arguments[j]) {
-                    // Deleted items will be replaced by "null"
-                    delete array[i];
-                }
-                // If current element is not null
-                if (array[i]){
-                    returnArray.push(array[i]);
+                    delete array[i]; // *Deleted items are replaced by "null"*
                 }
             }
+            // If current element is not null
+            if (array[i]){
+                returnArray.push(array[i]);
+            }
         }
+    console.log(returnArray);
     return returnArray;
     // removes a single value
     // removes multiple values => removeFromArray([1, 2, 3, 4], 3, 2) -> ([1, 4]);
